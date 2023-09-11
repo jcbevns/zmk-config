@@ -1,7 +1,11 @@
 ---
-include:
-  - board: nice_nano_v2
-    shield: scylla_left
-  - board: nice_nano_v2
-    shield: scylla_right
+# include:
+#   - board: nice_nano_v2
+#     shield: scylla_left
+#   - board: nice_nano_v2
+#     shield: scylla_right
 
+---
+include:
+  - board: scylla_left
+  - board: scylla_right
