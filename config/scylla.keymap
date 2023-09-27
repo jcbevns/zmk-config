@@ -100,12 +100,12 @@
 //                                    '---------------'                '---------------'
 
             bindings = <
-&kp GRAVE  &kp F1    &kp F2  &kp F3    &kp F4    &kp F5       &kp F6     &kp F7       &kp F8    &kp F9         &kp F10    &kp F11
-&trans     &kp LT    &kp GT  &kp LBKT  &kp RBKT  &kp PLUS     &kp PLUS   &kp HOME     &kp UP    &kp END        &none      &kp F12
-&trans     &kp EXCL  &kp AT  &kp LPAR  &kp RPAR  &kp MINUS    &kp MINUS  &kp LEFT     &kp DOWN  &kp RIGHT      &kp QMARK  &kp UNDER
-&trans     &none     &none   &kp LBRC  &kp RBRC  &kp EQUAL    &kp EQUAL  &kp PAGE_UP  &none     &kp PAGE_DOWN  &none      &none
-                             &trans    &trans    &trans       &trans     &trans       &trans
-                                       &trans    &trans       &trans     &trans
+&kp GRAVE  &kp F1            &kp F2             &kp F3    &kp F4    &kp F5       &kp F6     &kp F7       &kp F8    &kp F9         &kp F10    &kp F11
+&trans     &kp LT            &kp GT             &kp LBKT  &kp RBKT  &kp PLUS     &kp PLUS   &kp HOME     &kp UP    &kp END        &none      &kp F12
+&trans     &kp EXCL          &kp AT             &kp LPAR  &kp RPAR  &kp MINUS    &kp MINUS  &kp LEFT     &kp DOWN  &kp RIGHT      &kp QMARK  &kp UNDER
+&trans     &kp LG(LC(LEFT))  &kp LC(LG(RIGHT))  &kp LBRC  &kp RBRC  &kp EQUAL    &kp EQUAL  &kp PAGE_UP  &none     &kp PAGE_DOWN  &none      &none
+                                                &trans    &trans    &trans       &trans     &trans       &trans
+                                                          &trans    &trans       &trans     &trans
             >;
         };
 
