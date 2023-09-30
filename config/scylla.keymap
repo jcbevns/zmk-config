@@ -77,7 +77,7 @@
 &kp LSHIFT  &kp A   &kp S   &kp D   &kp F          &kp G                  &kp H                    &kp J      &kp K      &kp L    &kp SEMICOLON  &kp SQT
 &kp ESCAPE  &kp Z   &kp X   &kp C   &kp V          &kp B                  &kp N                    &kp M      &kp COMMA  &kp DOT  &kp SLASH      &kp BSLH
                             &mo 1   &kp BACKSPACE  &mt ENTER RIGHT_GUI    &omt ENTER LEFT_COMMAND  &kp SPACE  &mo 2
-                                    &kp LCTRL      &kp LALT               &kp RALT                 &kp RCTRL
+                                    &kp LCTRL      &kp LALT               &kp RIGHT_SHIFT          &mo 3
             >;
         };
 
