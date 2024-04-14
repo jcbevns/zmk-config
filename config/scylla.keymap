@@ -65,7 +65,7 @@
         smart_shift: smart_shift {
             label = "SMART_SHIFT";
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&sk RSHFT>, <&caps_word>;
+            bindings = <&sk RIGHT_SHIFT>, <&caps_word>;
             mods = <(MOD_RSFT)>;
             #binding-cells = <0>;
         };
@@ -97,7 +97,7 @@
 &kp LSHIFT  &kp A   &kp S   &kp D         &kp F          &kp G                  &kp H                &kp J      &kp K      &kp L    &kp SEMICOLON  &kp SQT
 &kp ESCAPE  &kp Z   &kp X   &omt LC(C) C  &omt LC(V) V   &kp B                  &kp N                &kp M      &kp COMMA  &kp DOT  &kp SLASH      &kp KP_ENTER
                             &mo 1         &kp BACKSPACE  &mt LEFT_WIN RETURN    &mt RIGHT_GUI ENTER  &kp SPACE  &mo 2
-                                          &kp LCTRL      &kp LALT               &kp RIGHT_SHIFT      &mo 3
+                                          &kp LCTRL      &kp LALT               &sk RIGHT_SHIFT      &mo 3
             >;
         };
 
