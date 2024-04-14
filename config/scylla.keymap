@@ -35,7 +35,6 @@
 
     behaviors {
         // used for SPACE/SHIFT and ENTER/CMD
-
         omt: own_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "OWN_MOD_TAP";
@@ -47,7 +46,6 @@
         };
 
         // used for Layers/BSPC/DEL
-
         olt: own_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "OWN_LAYER_TAP";
@@ -56,7 +54,37 @@
             tapping-term-ms = <160>;
             quick-tap-ms = <200>;
             bindings = <&mo>, <&kp>;
-        };
+	};
+    
+	/*
+        - tap: sticky shift
+        - double-tap: caps-word (shift + tap mod-morph)
+        - hold: shift
+	From: https://github.com/urob/zmk-config/
+	*/
+	/omit-if-no-ref/ smart_shift: smart_shift {
+	  label = "SMART_SHIFT";
+	  compatible = "zmk,behavior-mod-morph";
+          bindings = <&sk RSHFT>, <&caps_word>;
+          mods = <(MOD_RSFT)>;
+	  #binding-cells = <0>;
+	};
+
+	/*
+	- tap: backspace	
+	- hold: repeat backspace
+	- shift + tap: delete
+	- shift + hold: repeat delete
+	From: https://zmk.dev/docs/behaviors/mod-morph#advanced-configuration
+	*/
+	/omit-if-no-ref/ bkspc_del: backspace_delete {
+	  label = "BACKSPACE_DELETE";
+	  compatible = "zmk,behavior-mod-morph";
+	  bindings = <&kp BACKSPACE>, <&kp DELETE>;
+	  mods = <(MOD_LSFT|MOD_RSFT)>;
+	  #binding-cells = <0>;
+    	};
+
     };
 
     keymap {
