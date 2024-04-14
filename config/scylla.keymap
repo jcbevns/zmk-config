@@ -55,35 +55,35 @@
             quick-tap-ms = <200>;
             bindings = <&mo>, <&kp>;
 	};
-    
-	/*
-        - tap: sticky shift
-        - double-tap: caps-word (shift + tap mod-morph)
-        - hold: shift
-	From: https://github.com/urob/zmk-config/
-	*/
-	/omit-if-no-ref/ smart_shift: smart_shift {
-	  label = "SMART_SHIFT";
-	  compatible = "zmk,behavior-mod-morph";
-          bindings = <&sk RSHFT>, <&caps_word>;
-          mods = <(MOD_RSFT)>;
-	  #binding-cells = <0>;
-	};
+        
+        /*
+            - tap: sticky shift
+            - double-tap: caps-word (shift + tap mod-morph)
+            - hold: shift
+        From: https://github.com/urob/zmk-config/
+        */
+        smart_shift: smart_shift {
+            label = "SMART_SHIFT";
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&sk RSHFT>, <&caps_word>;
+            mods = <(MOD_RSFT)>;
+            #binding-cells = <0>;
+        };
 
-	/*
-	- tap: backspace	
-	- hold: repeat backspace
-	- shift + tap: delete
-	- shift + hold: repeat delete
-	From: https://zmk.dev/docs/behaviors/mod-morph#advanced-configuration
-	*/
-	/omit-if-no-ref/ bkspc_del: backspace_delete {
-	  label = "BACKSPACE_DELETE";
-	  compatible = "zmk,behavior-mod-morph";
-	  bindings = <&kp BACKSPACE>, <&kp DELETE>;
-	  mods = <(MOD_LSFT|MOD_RSFT)>;
-	  #binding-cells = <0>;
-    	};
+        /*
+        - tap: backspace	
+        - hold: repeat backspace
+        - shift + tap: delete
+        - shift + hold: repeat delete
+        From: https://zmk.dev/docs/behaviors/mod-morph#advanced-configuration
+        */
+        bkspc_del: backspace_delete {
+            label = "BACKSPACE_DELETE";
+            compatible = "zmk,behavior-mod-morph";
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            #binding-cells = <0>;
+            };
 
     };
 
